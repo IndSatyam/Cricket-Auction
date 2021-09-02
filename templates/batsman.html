@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Batsman</title>
+    </head>
+    <body>
+        <h1 align="center">List of batsman</h1><hr>
+        <table table border=8 bgcolor="aqua" bordercolor="#ffffff" width=80% align=center cellspacing="5" cellpadding="10">
+            <tr>
+                <th>P_ID</th>
+                <th>Speciality</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Nationality</th>
+                <th>Base price</th>
+                <th>Matches</th>
+                <th>Runs</th>
+                <th>Bat_avg</th>
+                <th>S/R</th>
+                <th>Best Score</th>    
+            </tr>
+            {% for item in dict %}
+            <tr>
+                {% for k,v in item.items %}
+                <td>{{ v }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

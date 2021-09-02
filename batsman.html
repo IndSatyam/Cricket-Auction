@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Batsman</title>
+    </head>
+    <body>
+        <h1 align="center">List of batsman</h1><hr>
+        {{ dict  }}
+        {% for item in dict %}
+            {{ item }}
+        {% endfor %}
+        <table>
+            <tr>
+                <th>P_ID</th>
+            </tr>
+            {% for item in dict %}
+            <tr>
+                {% for k,v in item.items %}
+                <td>{{ v }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

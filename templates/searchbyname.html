@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>IPL AUCTION</title>
+</head>
+<body bgcolor = "aqua">
+<h1><b><marquee>WELCOME</marquee></b><br><h1>
+<pre align="center"><b>Enter the name of the player below</b></pre>
+<pre align="center"><b>Click on the submit button to submit</b></pre><br>
+<form action=" " method="post">{% csrf_token %}
+<label for="first_name">First Name</label>
+<input type="text" placeholder="First Name" name="first_name" id="first_name"><br><br>
+<label for="last_name">Second Name</label>
+<input type="text" placeholder="Last Name" name="last_name" id="last_name"><br><br>
+<input type="submit" value="Submit">
+</form>
+<table border=8 bgcolor="aqua" bordercolor="#ffffff" width=60% align=center cellspacing="5" cellpadding="10">
+    <tr>
+        <th>P_ID</th>
+        <th>Speciality</th>
+        <th>Age</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Nationality</th>
+        <th>Base price</th>
+        <th>Matches</th>
+        <th>Runs</th>
+        <th>Bat_avg</th>
+        <th>S/R</th>
+        <th>30</th>
+        <th>50</th>
+        <th>Best Score</th>
+        <th>Wickets</th>
+        <th>Bowl_avg</th> 
+        <th>Eco</th>
+        <th>Best_bowl_perf</th>
+    </tr>
+    <tr>
+        {% for item in player_info %}
+            {% for k,v in item.items %}
+            <td>{{ v }}</td>
+            {% endfor %}
+        {% endfor %}
+        {% for my_item in player_stats %}
+            {% for k,v in my_item.items %}
+            <td>{{ v }}</td>
+            {% endfor %}
+        {% endfor %}    
+    </tr>
+</table>
+</body>
+</html>
+

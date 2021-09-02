@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>IPL Auciton</title>
+    </head>
+    <body>
+        <h1 align="center"><b>Enter the Player ID of the player you want to bid</b></h1><br><br><br><br>
+        <form action=" " method="post" align="center">{% csrf_token %}
+            <label for="PLAYER_ID">ID</label>
+            <input type="text" placeholder="Player ID" name="PLAYER_ID" id="PLAYER_ID"><br><br><br><br>
+            <label for="Uname">Username</label>
+            <input tupe="text" placeholder="Username" name="Uname" id="Uname"><br><br><br><br>
+            <input type="submit" value="Bid Player">
+        </form>
+    </body>
+</html>
